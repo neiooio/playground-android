@@ -19,6 +19,7 @@ android {
     }
 }
 repositories {
+    jcenter()
     flatDir {
         dirs 'libs'
     }
@@ -27,6 +28,12 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+    compile 'com.facebook.fresco:fresco:0.6.0+'
+    compile 'com.afollestad:material-dialogs:0.7.7.0'
+    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
 
-    compile(name:'neioosdk-release', ext:'aar')
+    compile(name:'neioo-sdk', ext:'aar')
 }
+
+

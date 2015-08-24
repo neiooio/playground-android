@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="true"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/view_beacon_dialog_img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        fresco:roundedCornerRadius="2dp"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="false"/>
+
+    <LinearLayout
+        android:id="@+id/view_beacon_dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c6"
+        android:orientation="vertical"
+        android:paddingBottom="8dp" >
+
+        <TextView
+            android:id="@+id/view_beacon_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:text="TextView"
+            android:textColor="@color/c11"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/view_beacon_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:text="TextView"
+            android:textColor="@color/c11"
+            android:textSize="14dp" />
+
+        <co.herxun.neiooplayground.widget.RippleView
+            android:id="@+id/view_beacon_dialog_ripple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:clipChildren="true" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/ok"
+                android:textColor="@color/c15" />
+        </co.herxun.neiooplayground.widget.RippleView>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+</LinearLayout>

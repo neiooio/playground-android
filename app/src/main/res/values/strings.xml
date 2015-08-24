@@ -1,4 +1,28 @@
 <resources>
-    <string name="app_name">NeiooPlayground</string>
-    <string name="neioo_appkey">Pk3haxQKssKJTVmcAQAfsCw8KbpySoAt</string>
+    <string name="app_name">Playground</string>
+    <string name="neioo_url">http://neioo.io</string>
+    <string name="neioo_appkey"></string>
+
+    <string name="title_proximity_marketing">Proximity\nMarketing</string>
+    <string name="title_shake">Shake</string>
+    <string name="title_target_marketing">Target\nMarketing</string>
+    <string name="title_buy_new_beacon">Buy\nNew Beacon</string>
+
+    <string name="sub_title_proximity_marketing">Proximity Marketing</string>
+    <string name="sub_title_shake">Shake</string>
+    <string name="sub_title_target_marketing">Target Marketing</string>
+    <string name="sub_title_buy_new_beacon">Buy New Beacon</string>
+
+    <string name="enter_your_name">Enter your name</string>
+    <string name="name">Name</string>
+    <string name="add_your_name">Add your name</string>
+
+    <string name="ok">OK</string>
+    <string name="add">ADD</string>
+    <string name="cancel">CANCEL</string>
+
+    <string name="action_next">Next</string>
+    <string name="action_back">Back</string>
+
+
 </resources>

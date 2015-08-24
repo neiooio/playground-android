@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/c7"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:gravity="center_vertical">
+    </android.support.v7.widget.Toolbar>
+
+    <WebView
+        android:id="@+id/web_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true" />
+
+    <com.gc.materialdesign.views.ProgressBarDeterminate
+        android:id="@+id/web_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/c16"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_centerHorizontal="true" >
+
+    </com.gc.materialdesign.views.ProgressBarDeterminate>
+
+</RelativeLayout>

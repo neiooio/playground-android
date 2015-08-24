@@ -5,6 +5,7 @@ import android.content.Context;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Observable;
+import java.util.Set;
 
 import co.herxun.neioo.Neioo;
 import co.herxun.neioo.callback.NeiooCallback;
@@ -12,13 +13,19 @@ import co.herxun.neioo.exception.NeiooException;
 import co.herxun.neioo.model.NeiooBeacon;
 import co.herxun.neioo.model.NeiooCampaign;
 import co.herxun.neioo.model.NeiooSpace;
+import co.herxun.neiooplayground.activity.BaseActivity;
+import co.herxun.neiooplayground.utils.BluetoothManager;
+import co.herxun.neiooplayground.utils.BluetoothStateChangedCallback;
 
 /**
  * Created by chiao on 15/7/23.
  */
 public class NeiooController extends Observable {
     private static NeiooController instance;
-    private NeiooController(){}
+    private BluetoothManager mBluetoothManager;
+    private NeiooController(){
+        mBluetoothManager = new BluetoothManager();
+    }
     public static NeiooController getInstance(){
         if(instance == null){
             instance = new NeiooController();
@@ -83,19 +90,44 @@ public class NeiooController extends Observable {
         }
     }
 
-    public void enable(){
-        try {
-            neioo.enable();
-        }catch(NullPointerException e){
-            throw new RuntimeException("Neioo hasn't been initialized");
+    public void addCriteriaData(String key, String value){
+        neioo.addCriteriaData(key, value);
+    }
+
+    public void removeCriteriaData(String key){
+        neioo.removeCriteriaData(key);
+    }
+
+    public Set<NeiooCampaign> getShakeCampaigns(){
+        return neioo.getShakeCampaigns();
+    }
+
+    public void enable(BaseActivity act, final NeiooEnabledCallback cbk){
+        if(mBluetoothManager.isBluetoothEnabled()){
+            boolean enabled = neioo.enable();
+            if(cbk!=null && enabled){
+                cbk.enabled();
+            }
+        }else{
+            mBluetoothManager.startMonitor(act, new BluetoothStateChangedCallback(){
+                @Override
+                public void onStateOn() {
+                    boolean enabled = neioo.enable();
+                    if(cbk!=null && enabled){
+                        cbk.enabled();
+                    }
+                }
+            });
+            mBluetoothManager.requestBluetooth(act);
         }
     }
 
-    public void disable(){
-        try {
-            neioo.disable();
-        }catch(NullPointerException e){
-            throw new RuntimeException("Neioo hasn't been initialized");
-        }
+    public void disable(BaseActivity act){
+        mBluetoothManager.stopMonitor(act);
+        neioo.disable();
+    }
+
+    public interface NeiooEnabledCallback{
+        void enabled();
     }
 }

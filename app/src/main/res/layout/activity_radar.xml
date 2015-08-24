@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.herxun.neiooplayground.activity.ProximityMarketingActivity"
+    android:fitsSystemWindows="true"
+    android:background="@color/c6">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/c6"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_title_proximity_marketing"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/toolbar_title"
+                android:textColor="@color/c11"
+                android:textSize="20dp" />
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/c8"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_root">
+
+        <view
+            android:layout_width="172dp"
+            android:layout_height="172dp"
+            class="co.herxun.neiooplayground.widget.RadarView"
+            android:id="@+id/view_radar"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_name"
+            android:layout_above="@+id/view_radar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
