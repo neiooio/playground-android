@@ -22,8 +22,6 @@ import co.herxun.neioo.model.NeiooCampaign;
 import co.herxun.neioo.model.NeiooSpace;
 import co.herxun.neiooplayground.R;
 import co.herxun.neiooplayground.neioo.NeiooActionPerformer;
-import co.herxun.neiooplayground.neioo.NeiooController;
-import co.herxun.neiooplayground.neioo.NeiooObserver;
 import co.herxun.neiooplayground.utils.DesignUtils;
 import co.herxun.neiooplayground.widget.RadarView;
 
@@ -35,49 +33,12 @@ public class TargetMarketingActivity extends BaseActivity{
     private RadarView mRadarView;
     private TextView textName;
     private View btnAddCriteriaData;
-    private NeiooObserver mNeiooObserver = new NeiooObserver() {
-        @Override
-        public void onEnterSpace(final NeiooSpace neiooSpace) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("onEnterSpace", neiooSpace.getName());
-                    setRadarInRange(true);
-                }
-            });
-        }
-
-        @Override
-        public void onExitSpace(final NeiooSpace neiooSpace) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("onExitSpace", neiooSpace.getName());
-                    setRadarInRange(false);
-                }
-            });
-        }
-
-        @Override
-        public void onCampaignTriggered(NeiooBeacon neiooBeacon, final NeiooCampaign neiooCampaign) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    if(neiooCampaign.getCriterias().size()!=0){
-                        for(NeiooAction action : neiooCampaign.getActions()){
-                            NeiooActionPerformer.getInstance().perform(TargetMarketingActivity.this,action);
-                        }
-                    }
-                }
-            });
-        }
-    };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
+        showNotificationCampaignIfNeeded();
     }
 
     private void initView(){
@@ -194,9 +155,11 @@ public class TargetMarketingActivity extends BaseActivity{
         }
     }
 
-    private void enableNeioo(){
-        NeiooController.getInstance().addObserver(mNeiooObserver);
-        NeiooController.getInstance().enable(this, new NeiooController.NeiooEnabledCallback() {
+    private void setNameCriteria(String name){
+        getNeioo().addCriteriaData("name", name);
+        textName.setText(name);
+        btnAddCriteriaData.setVisibility(View.GONE);
+        enableNeioo(new NeiooEnabledCallback() {
             @Override
             public void enabled() {
                 mRadarView.startAnimation();
@@ -204,21 +167,9 @@ public class TargetMarketingActivity extends BaseActivity{
         });
     }
 
-    private void disableNeioo(){
-        NeiooController.getInstance().removeCriteriaData("name");
-        NeiooController.getInstance().disable(this);
-        NeiooController.getInstance().deleteObserver(mNeiooObserver);
-    }
-
-    private void setNameCriteria(String name){
-        NeiooController.getInstance().addCriteriaData("name", name);
-        textName.setText(name);
-        btnAddCriteriaData.setVisibility(View.GONE);
-        enableNeioo();
-    }
-
     @Override
     public void onBackPressed(){
+        getNeioo().removeCriteriaData("name");
         disableNeioo();
         super.onBackPressed();
         overridePendingTransition(android.R.anim.fade_in, R.anim.slide_out_right);
@@ -232,5 +183,41 @@ public class TargetMarketingActivity extends BaseActivity{
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onEnterSpace(final NeiooSpace neiooSpace) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("onEnterSpace", neiooSpace.getName());
+                setRadarInRange(true);
+            }
+        });
+    }
+
+    @Override
+    public void onExitSpace(final NeiooSpace neiooSpace) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("onExitSpace", neiooSpace.getName());
+                setRadarInRange(false);
+            }
+        });
+    }
+
+    @Override
+    public void onCampaignTriggered(NeiooBeacon neiooBeacon, final NeiooCampaign neiooCampaign) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if(neiooCampaign.getCriterias().size()!=0){
+                    for(NeiooAction action : neiooCampaign.getActions()){
+                        NeiooActionPerformer.getInstance().perform(TargetMarketingActivity.this,action);
+                    }
+                }
+            }
+        });
     }
 }

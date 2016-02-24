@@ -10,7 +10,6 @@ import android.widget.TextView;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 import co.herxun.neioo.model.NeiooAction;
@@ -18,8 +17,6 @@ import co.herxun.neioo.model.NeiooCampaign;
 import co.herxun.neioo.model.NeiooSpace;
 import co.herxun.neiooplayground.R;
 import co.herxun.neiooplayground.neioo.NeiooActionPerformer;
-import co.herxun.neiooplayground.neioo.NeiooController;
-import co.herxun.neiooplayground.neioo.NeiooObserver;
 import co.herxun.neiooplayground.utils.ShakeDetector;
 import co.herxun.neiooplayground.widget.RadarView;
 import co.herxun.neiooplayground.widget.TipDialog;
@@ -32,52 +29,54 @@ public class ShakeActivity extends BaseActivity implements ShakeDetector.OnShake
     private Map<String,TipDialog> campaignShowingTip;
     private MediaPlayer soundShake, soundPop;
 
-    private NeiooObserver mNeiooObserver = new NeiooObserver() {
-        @Override
-        public void onEnterSpace(final NeiooSpace neiooSpace) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("onEnterSpace", neiooSpace.getName());
-                    setRadarInRange(true);
-                }
-            });
-        }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initView();
+        initData();
+        showNotificationCampaignIfNeeded();
+    }
 
-        @Override
-        public void onExitSpace(final NeiooSpace neiooSpace) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("onExitSpace", neiooSpace.getName());
-                    setRadarInRange(false);
-                }
-            });
-        }
+    private void initView(){
+        setContentView(R.layout.activity_radar);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        @Override
-        public void inShakeRange(final NeiooCampaign neiooCampaign) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("inShakeRange", neiooCampaign.getId());
-                    showTip(neiooCampaign);
-                }
-            });
-        }
+        TextView textTitle = (TextView) findViewById(R.id.toolbar_title);
+        textTitle.setText(R.string.sub_title_shake);
 
-        @Override
-        public void outShakeRange(final NeiooCampaign neiooCampaign) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("outShakeRange", neiooCampaign.getId());
-                    dismissTip(neiooCampaign);
-                }
-            });
-        }
+        mRadarView = (RadarView) findViewById(R.id.view_radar);
+        setRadarInRange(false);
 
-    };
+    }
+
+    private void initData(){
+        ShakeDetector.getInstance(this).setOnShakeListener(this);
+        ShakeDetector.getInstance(this).startDetection();
+        campaignShowingTip = new HashMap<>();
+        soundShake = MediaPlayer.create(this, R.raw.shake);
+        soundPop = MediaPlayer.create(this, R.raw.pop);
+        NeiooActionPerformer.getInstance().setMultipleImagesRule(NeiooActionPerformer.IMAGE_RULE_RANDOM);
+
+        enableNeioo(new NeiooEnabledCallback() {
+            @Override
+            public void enabled() {
+                mRadarView.startAnimation();
+            }
+        });
+    }
+
+    private void setRadarInRange(boolean in){
+        if(in){
+            mRadarView.setIcon(R.drawable.phone_yellow);
+            mRadarView.setColor(getResources().getColor(R.color.c15));
+        }else{
+            mRadarView.setIcon(R.drawable.phone_grey);
+            mRadarView.setColor(getResources().getColor(R.color.c10));
+        }
+    }
 
     private void showTip(NeiooCampaign campaign){
         if(campaignShowingTip.containsKey(campaign.getId())){
@@ -106,90 +105,38 @@ public class ShakeActivity extends BaseActivity implements ShakeDetector.OnShake
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        initView();
-        initData();
-    }
-
-    private void initView(){
-        setContentView(R.layout.activity_radar);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        TextView textTitle = (TextView) findViewById(R.id.toolbar_title);
-        textTitle.setText(R.string.sub_title_shake);
-
-        mRadarView = (RadarView) findViewById(R.id.view_radar);
-        setRadarInRange(false);
-
-    }
-
-    private void initData(){
-        enableNeioo();
-        ShakeDetector.getInstance(this).setOnShakeListener(this);
-        ShakeDetector.getInstance(this).startDetection();
-        campaignShowingTip = new HashMap<>();
-        soundShake = MediaPlayer.create(this, R.raw.shake);
-        soundPop = MediaPlayer.create(this, R.raw.pop);
-        NeiooActionPerformer.getInstance().setMultipleImagesRule(NeiooActionPerformer.IMAGE_RULE_RANDOM);
-    }
-
-    private void enableNeioo(){
-        NeiooController.getInstance().addObserver(mNeiooObserver);
-        NeiooController.getInstance().enable(this, new NeiooController.NeiooEnabledCallback() {
-            @Override
-            public void enabled() {
-                mRadarView.startAnimation();
-            }
-        });
-    }
-
-    private void disableNeioo(){
-        NeiooController.getInstance().disable(this);
-        NeiooController.getInstance().deleteObserver(mNeiooObserver);
-    }
-
-    private void setRadarInRange(boolean in){
-        if(in){
-            mRadarView.setIcon(R.drawable.phone_yellow);
-            mRadarView.setColor(getResources().getColor(R.color.c15));
-        }else{
-            mRadarView.setIcon(R.drawable.phone_grey);
-            mRadarView.setColor(getResources().getColor(R.color.c10));
-        }
-    }
-
-    @Override
     public void onBackPressed(){
         NeiooActionPerformer.getInstance().setMultipleImagesRule(NeiooActionPerformer.IMAGE_RULE_FIRST);
         ShakeDetector.getInstance(this).removeOnShakeListener(this);
         ShakeDetector.getInstance(this).stopDetection();
         disableNeioo();
+
         super.onBackPressed();
         overridePendingTransition(android.R.anim.fade_in, R.anim.slide_out_right);
     }
 
-    private HashSet<String> campaignSet;
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     @Override
     public void onShake() {
         if(campaignShowingTip.size()==0){
             return;
         }
 
-        campaignSet = new HashSet();
         if(soundShake.isPlaying()){
             soundShake.seekTo(0);
         }
         soundShake.start();
 
-        for(NeiooCampaign campaign : NeiooController.getInstance().getShakeCampaigns()){
-            if(campaignSet.contains(campaign.getId())){
-                return;
-            }
-            campaignSet.add(campaign.getId());
+        for(NeiooCampaign campaign : getNeioo().getShakeCampaigns()){
             for(NeiooAction action : campaign.getActions()){
                 if(soundPop.isPlaying()){
                     soundPop.seekTo(0);
@@ -201,13 +148,48 @@ public class ShakeActivity extends BaseActivity implements ShakeDetector.OnShake
     }
 
 
+
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public void onEnterSpace(final NeiooSpace neiooSpace) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("onEnterSpace", neiooSpace.getName());
+                setRadarInRange(true);
+            }
+        });
+    }
+
+    @Override
+    public void onExitSpace(final NeiooSpace neiooSpace) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("onExitSpace", neiooSpace.getName());
+                setRadarInRange(false);
+            }
+        });
+    }
+
+    @Override
+    public void inShakeRange(final NeiooCampaign neiooCampaign) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("inShakeRange", neiooCampaign.getId());
+                showTip(neiooCampaign);
+            }
+        });
+    }
+
+    @Override
+    public void outShakeRange(final NeiooCampaign neiooCampaign) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("outShakeRange", neiooCampaign.getId());
+                dismissTip(neiooCampaign);
+            }
+        });
     }
 }

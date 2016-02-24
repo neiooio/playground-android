@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/gson-2.3.1.jar"
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
         jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/gson-2.3.1-8370e68ccbec9a7497ffd65b996303bcf6b150ab.jar" />
+        revision="23.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-fca834af20daa639ca190c8079a50dbce6cd7422.jar" />
     </item>
     <item
         jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc2"
+        revision="23.0.1"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
         <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-bc1d37e2c2839666f48243021378d4bdca588580.jar" />
     </item>
     <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.6.0/jars/classes.jar"
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="27ebd5d2c69a1830b4ff47a1d5d4c6a4aab5e233">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-45419da9ae930cef7dece6263476830407c884bf.jar" />
+        revision="23.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-5d175ac3311a217fa677140fcea318d9ad63aab6.jar" />
     </item>
     <item
-        jar="/Users/chiao/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.9.0/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/library-2.4.0-d0e773f3c8bce36f4b66891e5add20662d180286.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="d572f92ecb6ae3b66e807550b07e4a6cca1f737f">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-4461ba8ef5b4f2baaf4fba5a01460010641f4e14.jar" />
+        revision="23.0.1"
+        sha1="3158c15bb0ae97575debdb40cfcd8f0f9f244526">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-ef9f58a9ecd3326a61e97f5f7b3d6c173ffc3d66.jar" />
     </item>
     <item
         jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/android-async-http-1.4.6.jar"
         jumboMode="false"
-        revision="23.0.0 rc2"
+        revision="23.0.1"
         sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
         <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-8198d9d85f9c5e5d2d79f41e52a63307391d6dfa.jar" />
     </item>
     <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.6.0/jars/classes.jar"
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.5/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="87bffaacf21eb2c6fc61cf01930ff96ae175e798">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-e4913bd8a32b1cca7c8be3e5f09ff33beff68eb0.jar" />
+        revision="23.0.1"
+        sha1="12b228574de7977e56e41cbfb385b1463bbdb41a">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-8bbfeeb7a7ef2b437706fef2d64a6e018b639413.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.7.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57bfbac4461731cd061cf6e32c2e62d6f0db71df">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-bd079a939604729c0116e1b99025ccf68b2d8191.jar" />
     </item>
     <item
         jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
@@ -58,74 +58,11 @@
         <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-5d175ac3311a217fa677140fcea318d9ad63aab6.jar" />
     </item>
     <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/greendao-1.3.7.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/greendao-1.3.7-48fbd1411ad04a0af4eb001d3c277a5a0101ca27.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="129874135e6081269ace2312092031558865de12">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-31f6e946bdaa68d5f1ba8a8fabf4fe47073d6111.jar" />
-    </item>
-    <item
         jar="/Users/chiao/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="23.0.0 rc2"
         sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
         <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-cd0155a22f063b1de6f6ac48587655f57e459223.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.6.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="b5eb6c5f132d34f7ece3fbae25feb43e4ea9d6aa">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-6495a492b450ca98d72bbe73560e26fbdc36b180.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-6ed42146fbb26269f1d625cac35e8a24e57cba4d.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/sensorobeaconkit-3.2.5.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="facc8bbf23a06d6d294e15362282f6cf61c98022">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/sensorobeaconkit-3.2.5-a65ae76387614ba5e1e8f18a2f3d79a18fd0083b.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.5/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="12b228574de7977e56e41cbfb385b1463bbdb41a">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-8bbfeeb7a7ef2b437706fef2d64a6e018b639413.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-f3b8747f2e75b2fead414ac6f917608913cbfd00.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-fca834af20daa639ca190c8079a50dbce6cd7422.jar" />
-    </item>
-    <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.7.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="57bfbac4461731cd061cf6e32c2e62d6f0db71df">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-bd079a939604729c0116e1b99025ccf68b2d8191.jar" />
     </item>
     <item
         jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/sensorocloud-3.2.5.jar"
@@ -135,11 +72,193 @@
         <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/sensorocloud-3.2.5-758e088876bf75af4270a645e558baabf0758dbc.jar" />
     </item>
     <item
-        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/neioo-sdk/jars/classes.jar"
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.github.navasmdc/MaterialDesign/1.5/jars/classes.jar"
         jumboMode="false"
         revision="23.0.0 rc2"
-        sha1="287b26576aea2a63181d7e566fc17cdf0b3568b7">
-        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-d446b0892085c65e4297a8ee3ce7f9694368df6f.jar" />
+        sha1="12b228574de7977e56e41cbfb385b1463bbdb41a">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-8bbfeeb7a7ef2b437706fef2d64a6e018b639413.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-fca834af20daa639ca190c8079a50dbce6cd7422.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/sensorobeaconkit-3.2.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="facc8bbf23a06d6d294e15362282f6cf61c98022">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/sensorobeaconkit-3.2.5-a65ae76387614ba5e1e8f18a2f3d79a18fd0083b.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-f3b8747f2e75b2fead414ac6f917608913cbfd00.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/library-2.4.0-d0e773f3c8bce36f4b66891e5add20662d180286.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-cd0155a22f063b1de6f6ac48587655f57e459223.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-8198d9d85f9c5e5d2d79f41e52a63307391d6dfa.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/gson-2.3.1-8370e68ccbec9a7497ffd65b996303bcf6b150ab.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-6ed42146fbb26269f1d625cac35e8a24e57cba4d.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.9.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39bd9f893c75eac9e76559cc4e96af6e417afdc5">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-472d7c213fbae090d2cf0d788017ff003c479ae1.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.9.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ca51025f4a58fc7fb6cfaa85e7d09b7ae47e6187">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-6d1e0069cf367ddcb6c38cf9587ff5f45b5e1ba0.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/greendao-1.3.7.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/greendao-1.3.7-48fbd1411ad04a0af4eb001d3c277a5a0101ca27.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-bc1d37e2c2839666f48243021378d4bdca588580.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/sensorocloud-3.2.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4f3d791ebdef13894d5abb19265f83194e24066">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/sensorocloud-3.2.5-758e088876bf75af4270a645e558baabf0758dbc.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.7.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="57bfbac4461731cd061cf6e32c2e62d6f0db71df">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-bd079a939604729c0116e1b99025ccf68b2d8191.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/sensorobeaconkit-3.2.5.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="facc8bbf23a06d6d294e15362282f6cf61c98022">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/sensorobeaconkit-3.2.5-a65ae76387614ba5e1e8f18a2f3d79a18fd0083b.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/uk.co.chrisjenx/calligraphy/2.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-f3b8747f2e75b2fead414ac6f917608913cbfd00.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.9.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57528b5deee77bfa2188fc279fd45066366f17f5">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-344f54f9a7d6811ad9d689cfb39ad03321d20d66.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/library-2.4.0-d0e773f3c8bce36f4b66891e5add20662d180286.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.pnikosis/materialish-progress/1.7/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="41a4edf3c43fdbce6eba27da50b17ff9933987f1">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-df0bbc12f820a1b0a4b260479e894714826a418f.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.9.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4ee95617ab850030c51486d02bc9d207b14419c6">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-d0d6c541752c4d38b5f0ca61c3931b4183657130.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/greendao-1.3.7.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/greendao-1.3.7-48fbd1411ad04a0af4eb001d3c277a5a0101ca27.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/neioo-sdk-1.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="91af6a09adf6b0d0a1026976acf58ee9e8e02b5e">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-393afdf3be5c5098f715b3029668058f32d27a0a.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-31f6e946bdaa68d5f1ba8a8fabf4fe47073d6111.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/classes-6ed42146fbb26269f1d625cac35e8a24e57cba4d.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-31f6e946bdaa68d5f1ba8a8fabf4fe47073d6111.jar" />
+    </item>
+    <item
+        jar="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/libs/gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="/Users/chiao/AndroidStudioProjects/NeiooPlayground/app/build/intermediates/pre-dexed/debug/gson-2.3.1-8370e68ccbec9a7497ffd65b996303bcf6b150ab.jar" />
     </item>
 
 </items>

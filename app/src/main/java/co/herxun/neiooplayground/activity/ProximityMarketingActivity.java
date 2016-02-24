@@ -12,54 +12,17 @@ import co.herxun.neioo.model.NeiooCampaign;
 import co.herxun.neioo.model.NeiooSpace;
 import co.herxun.neiooplayground.R;
 import co.herxun.neiooplayground.neioo.NeiooActionPerformer;
-import co.herxun.neiooplayground.neioo.NeiooController;
-import co.herxun.neiooplayground.neioo.NeiooObserver;
 import co.herxun.neiooplayground.widget.RadarView;
 
 public class ProximityMarketingActivity extends BaseActivity{
     private RadarView mRadarView;
-    private NeiooObserver mNeiooObserver = new NeiooObserver() {
-        @Override
-        public void onCampaignTriggered(NeiooBeacon neiooBeacon, final NeiooCampaign neiooCampaign) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    for(NeiooAction action : neiooCampaign.getActions()){
-                        Log.e("onCampaignTriggered",action.getName());
-                        NeiooActionPerformer.getInstance().perform(ProximityMarketingActivity.this, action);
-                    }
-                }
-            });
-        }
-        @Override
-        public void onEnterSpace(final NeiooSpace neiooSpace) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("onEnterSpace", neiooSpace.getName());
-                    setRadarInRange(true);
-                }
-            });
-        }
-
-        @Override
-        public void onExitSpace(final NeiooSpace neiooSpace) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    Log.e("onExitSpace", neiooSpace.getName());
-                    setRadarInRange(false);
-                }
-            });
-        }
-    };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
         initData();
+        showNotificationCampaignIfNeeded();
     }
 
     private void initView(){
@@ -78,22 +41,12 @@ public class ProximityMarketingActivity extends BaseActivity{
     }
 
     private void initData(){
-        enableNeioo();
-    }
-
-    private void enableNeioo(){
-        NeiooController.getInstance().addObserver(mNeiooObserver);
-        NeiooController.getInstance().enable(this, new NeiooController.NeiooEnabledCallback() {
+        enableNeioo(new NeiooEnabledCallback() {
             @Override
             public void enabled() {
                 mRadarView.startAnimation();
             }
         });
-    }
-
-    private void disableNeioo(){
-        NeiooController.getInstance().disable(this);
-        NeiooController.getInstance().deleteObserver(mNeiooObserver);
     }
 
     private void setRadarInRange(boolean in){
@@ -121,5 +74,41 @@ public class ProximityMarketingActivity extends BaseActivity{
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+
+    @Override
+    public void onCampaignTriggered(NeiooBeacon neiooBeacon, final NeiooCampaign neiooCampaign) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                for(NeiooAction action : neiooCampaign.getActions()){
+                    Log.e("onCampaignTriggered", action.getName());
+                    NeiooActionPerformer.getInstance().perform(ProximityMarketingActivity.this, action);
+                }
+            }
+        });
+    }
+    @Override
+    public void onEnterSpace(final NeiooSpace neiooSpace) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("onEnterSpace", neiooSpace.getName());
+                setRadarInRange(true);
+            }
+        });
+    }
+
+    @Override
+    public void onExitSpace(final NeiooSpace neiooSpace) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("onExitSpace", neiooSpace.getName());
+                setRadarInRange(false);
+            }
+        });
     }
 }

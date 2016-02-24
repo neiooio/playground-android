@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.LinearLayout;
 
+import co.herxun.neioo.exception.NeiooException;
 import co.herxun.neiooplayground.R;
 import co.herxun.neiooplayground.utils.Constant;
 import co.herxun.neiooplayground.widget.NaviBubble;
@@ -20,6 +21,22 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
+        checkBundle();
+    }
+
+    private void checkBundle(){
+        try {
+            getNeioo().getNotificationCampaign(getIntent());
+            if(getLastResumeActivity()!=null){
+                Intent i = new Intent(this, getLastResumeActivity().getClass());
+                i.putExtras(getIntent().getExtras());
+                startActivity(i);
+            }else{
+                showNotificationCampaignIfNeeded();
+            }
+        } catch (NeiooException e) {
+            e.printStackTrace();
+        }
     }
 
     private void initView(){

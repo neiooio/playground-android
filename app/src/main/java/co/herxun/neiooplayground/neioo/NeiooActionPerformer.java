@@ -1,12 +1,8 @@
 package co.herxun.neiooplayground.neioo;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Vibrator;
@@ -115,21 +111,6 @@ public class NeiooActionPerformer {
                         }
                     })
                     .show();
-
-            if(!activity.isInForeground()){
-                int notifyID = 1;
-                int requestCode = notifyID;
-                Intent intent = activity.getIntent();
-                int flags = PendingIntent.FLAG_CANCEL_CURRENT;
-                PendingIntent pendingIntent = PendingIntent.getActivity(activity.getApplicationContext(), requestCode, intent, flags);
-                NotificationManager notificationManager = (NotificationManager) activity.getSystemService(Context.NOTIFICATION_SERVICE);
-                Notification notification = new Notification.Builder(activity.getApplicationContext())
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setContentTitle(activity.getString(R.string.app_name))
-                        .setContentText(push_text).setContentIntent(pendingIntent)
-                        .build();
-                notificationManager.notify(notifyID, notification);
-            }
         } catch (Exception e) {
             e.printStackTrace();
         }
